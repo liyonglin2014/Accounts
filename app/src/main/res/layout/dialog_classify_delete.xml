@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:background="@drawable/bg_dialog_book_add"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray"
+        android:textSize="23sp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/tixing"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bg_gray_light"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray3"
+        android:textSize="17sp"
+        android:padding="15dp"
+        android:gravity="center"
+        android:text="@string/delete_commit_classify"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_classify_delete_commit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_button_blue"
+            android:textSize="17sp"
+            android:text="@string/commit"/>
+
+        <Button
+            android:id="@+id/bt_classify_delete_cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/gray"
+            android:background="@drawable/bg_button_gray"
+            android:textSize="17sp"
+            android:text="@string/cancel"/>
+
+    </LinearLayout>
+</LinearLayout>

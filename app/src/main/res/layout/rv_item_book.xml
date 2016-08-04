@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_rv_item_book"
+    android:layout_width="80dp"
+    android:layout_height="110dp"
+    android:padding="5dp"
+    android:background="@mipmap/book">
+
+    <TextView
+        android:id="@+id/tv_rv_item_bookname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:layout_marginTop="15dp"
+        android:singleLine="true"
+        android:layout_centerHorizontal="true"
+        android:text="团队账本"/>
+
+    <ImageView
+        android:id="@+id/iv_gou_book"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:src="@mipmap/gou"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

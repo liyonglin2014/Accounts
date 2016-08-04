@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/ll_homepageBottom_mingxi"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:paddingTop="3dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_homepageBottom_mingxi"
+            android:layout_width="@dimen/homepage_bottom_img"
+            android:layout_height="@dimen/homepage_bottom_img"
+            android:src="@mipmap/mingxi_lan" />
+
+        <TextView
+            android:id="@+id/tv_homepageBottom_mingxi"
+            style="@style/Text_homepageBottom"
+            android:textColor="@color/blue_light"
+            android:text="@string/mingxi" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_homepageBottom_qianbao"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:paddingTop="3dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_homepageBottom_qianbao"
+            android:layout_width="@dimen/homepage_bottom_img"
+            android:layout_height="@dimen/homepage_bottom_img"
+            android:src="@mipmap/qianbao" />
+
+        <TextView
+            android:id="@+id/tv_homepageBottom_qianbao"
+            style="@style/Text_homepageBottom"
+            android:textColor="@color/gray"
+            android:text="@string/qianbao" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_account_add"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:src="@mipmap/jiahao"/>
+
+    <LinearLayout
+        android:id="@+id/ll_homepageBottom_tixing"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:paddingTop="3dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_homepageBottom_tixing"
+            android:layout_width="@dimen/homepage_bottom_img"
+            android:layout_height="@dimen/homepage_bottom_img"
+            android:src="@mipmap/tixing" />
+
+        <TextView
+            android:id="@+id/tv_homepageBottom_tixing"
+            style="@style/Text_homepageBottom"
+            android:textColor="@color/gray"
+            android:text="@string/tixing" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_homepageBottom_zhongxin"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="3dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_homepageBottom_zhongxin"
+            android:layout_width="@dimen/homepage_bottom_img"
+            android:layout_height="@dimen/homepage_bottom_img"
+            android:src="@mipmap/zhongxin" />
+
+        <TextView
+            android:id="@+id/tv_homepageBottom_zhongxin"
+            style="@style/Text_homepageBottom"
+            android:textColor="@color/gray"
+            android:text="@string/zhongxin" />
+
+    </LinearLayout>
+
+</LinearLayout>

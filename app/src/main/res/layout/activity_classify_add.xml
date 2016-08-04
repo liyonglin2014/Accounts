@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray_light"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="1dp"
+        android:gravity="center_vertical"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_classify_add"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:src="@mipmap/icon_qita"/>
+
+        <EditText
+            android:id="@+id/et_classify_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColorHint="@color/gray_light2"
+            android:background="@null"
+            android:textColor="@color/gray2"
+            android:textSize="20sp"
+            android:hint="自定义输入名称"/>
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gv_show_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="5"
+        android:verticalSpacing="15dp"/>
+
+</LinearLayout>
