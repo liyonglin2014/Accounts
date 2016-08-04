@@ -29,7 +29,6 @@ public class KeyboardUtils {
     private List<Keyboard.Key> keys;
 
     public KeyboardUtils(Context context, Activity activity, TextView textView) {
-        System.out.println();
         mContext = context;
         mActivity = activity;
         mTextView = textView;
