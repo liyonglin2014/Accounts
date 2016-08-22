@@ -21,6 +21,7 @@ import com.liyonglin.accounts.adapter.ClassifyListAdapter;
 import com.liyonglin.accounts.bean.Classify;
 import com.liyonglin.accounts.utils.AccountDBUtils;
 import com.liyonglin.accounts.utils.FinalAttr;
+import com.liyonglin.accounts.utils.SwipeMenuListViewUtils;
 
 import java.util.List;
 
@@ -56,21 +57,7 @@ public class ClassifyListActivity extends ToolBarActivity2 {
         adapter = new ClassifyListAdapter(this, classifyList);
 
         lv_classify.setAdapter(adapter);
-        SwipeMenuCreator creator = new SwipeMenuCreator() {
-
-            @Override
-            public void create(SwipeMenu menu) {
-                SwipeMenuItem deleteItem = new SwipeMenuItem(
-                        getApplicationContext());
-                deleteItem.setBackground(new ColorDrawable(Color.RED));
-                deleteItem.setWidth(dp2px(85));
-                deleteItem.setTitle("删除");
-                deleteItem.setTitleSize(18);
-                deleteItem.setTitleColor(Color.WHITE);
-                menu.addMenuItem(deleteItem);
-            }
-        };
-        lv_classify.setMenuCreator(creator);
+        lv_classify.setMenuCreator(SwipeMenuListViewUtils.getCreator(this));
         lv_classify.setSwipeDirection(SwipeMenuListView.DIRECTION_LEFT);
         lv_classify.setOnMenuItemClickListener(new SwipeMenuListView.OnMenuItemClickListener() {
             @Override
@@ -124,10 +111,6 @@ public class ClassifyListActivity extends ToolBarActivity2 {
         }
     }
 
-    private int dp2px(int dp) {
-        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp,
-                getResources().getDisplayMetrics());
-    }
 
     private void updateAdapter(){
         classifyList.clear();

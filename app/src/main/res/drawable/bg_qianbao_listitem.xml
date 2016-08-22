@@ -5,10 +5,10 @@
     <corners android:radius="5dp" />
 
     <padding
-        android:top="10dp"
-        android:bottom="10dp"
-        android:left="10dp"
-        android:right="10dp" />
+        android:top="8dp"
+        android:bottom="8dp"
+        android:left="13dp"
+        android:right="13dp" />
 
     <solid android:color="@color/blue_light" />
 

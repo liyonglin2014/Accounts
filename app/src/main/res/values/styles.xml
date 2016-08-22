@@ -6,7 +6,12 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:listDivider">@drawable/divider_bg</item>
     </style>
+
+    <!--<style name="AppTheme" parent="AppBaseTheme">-->
+        <!--<item name="android:listDivider">@drawable/divider_bg</item>-->
+    <!--</style>-->
 
     <!-- 底部菜单文字 -->
     <style name="Text_homepageBottom">
@@ -18,6 +23,15 @@
 
     <style name="MyStyle" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowIsTranslucent">true</item>
+        <item name="android:listDivider">@drawable/divider_bg</item>
+    </style>
+
+    <style name="dateStyle">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
     </style>
 
 </resources>

@@ -1,112 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/bg_gray_light"
-    android:orientation="vertical">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:padding="15dp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:background="@drawable/bg_select_out_in">
-
-            <TextView
-                android:id="@+id/tv_account_in"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="5dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="5dp"
-                android:text="@string/shouru"
-                android:textColor="@color/blue_light" />
-
-            <TextView
-                android:layout_width="0.5dp"
-                android:layout_height="match_parent"
-                android:background="@color/gray_light" />
-
-            <TextView
-                android:id="@+id/tv_account_out"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="5dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="5dp"
-                android:text="@string/zhichu"
-                android:textColor="@color/gray2" />
-
-        </LinearLayout>
-
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_alignParentRight="true"
-            android:src="@mipmap/back" />
-
-    </RelativeLayout>
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="0.5dp"
-        android:background="@color/white"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp">
+        android:layout_height="match_parent"
+        android:background="@color/bg_gray_light"
+        android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/iv_classify_img"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:src="@mipmap/icon_qita" />
-
-        <TextView
-            android:id="@+id/tv_classify_name"
-            android:layout_width="0dp"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="1"
-            android:text="@string/qita"
-            android:textColor="@color/gray2"
-            android:textSize="20sp" />
+            android:background="@color/white"
+            android:padding="15dp">
 
-        <TextView
-            android:id="@+id/tv_account_money"
-            android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_select_out_in">
+
+                <TextView
+                    android:id="@+id/tv_account_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/shouru"
+                    android:textColor="@color/blue_light" />
+
+                <TextView
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_light" />
+
+                <TextView
+                    android:id="@+id/tv_account_out"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/zhichu"
+                    android:textColor="@color/gray2" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/back" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="0.00"
-            android:textColor="@color/gray"
-            android:textSize="32sp" />
+            android:layout_marginTop="0.5dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:id="@+id/iv_classify_img"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@mipmap/icon_qita" />
+
+            <TextView
+                android:id="@+id/tv_classify_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="@string/qita"
+                android:textColor="@color/gray2"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_account_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textColor="@color/gray"
+                android:textSize="32sp" />
+
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_show_classify"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
 
     </LinearLayout>
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/vp_show_classify"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-
-    <android.inputmethodservice.KeyboardView
-        android:id="@+id/keyboard_view"
+    <LinearLayout
+        android:id="@+id/ll_showkeyboard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:keyBackground="@drawable/bg_seletor_keyboard"
-        android:keyTextColor="@color/white"
-        android:keyTextSize="25sp"
-        android:labelTextSize="25sp"
-        android:visibility="gone" />
+        android:orientation="vertical"
+        android:layout_gravity="bottom">
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_show_payWay"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:gravity="center"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bg_select_account"
+                android:text="付款方式"/>
+
+            <TextView
+                android:id="@+id/tv_show_isPay"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:textColor="@color/gray"
+                android:gravity="center"
+                android:background="@drawable/bg_select_account"
+                android:text="已付"/>
+
+            <TextView
+                android:id="@+id/tv_show_date"
+                android:layout_marginRight="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:background="@drawable/bg_select_account"
+                android:text="08月04日"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/iv_show_team"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/temp"/>
+
+            <ImageView
+                android:id="@+id/iv_show_write"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@mipmap/write"/>
+
+
+
+        </LinearLayout>
+
+        <android.inputmethodservice.KeyboardView
+            android:id="@+id/keyboard_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:keyBackground="@drawable/bg_seletor_keyboard"
+            android:keyTextColor="@color/white"
+            android:keyTextSize="25sp"
+            android:labelTextSize="25sp" />
+
+    </LinearLayout>
+
+</FrameLayout>

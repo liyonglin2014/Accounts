@@ -3,7 +3,6 @@
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/bg_qianbao_listitem"
-    android:padding="10dp"
     android:gravity="center_vertical">
 
     <ImageView
@@ -41,7 +40,7 @@
         android:id="@+id/tv_qianbao_item_money"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:text="0.00"
         android:textColor="@android:color/white"/>
 

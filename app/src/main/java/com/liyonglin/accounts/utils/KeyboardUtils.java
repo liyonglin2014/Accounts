@@ -2,13 +2,21 @@ package com.liyonglin.accounts.utils;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Point;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
+import android.view.Display;
 import android.view.View;
+import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.liyonglin.accounts.R;
+import com.liyonglin.accounts.activity.AccountAddActivity;
+import com.liyonglin.accounts.activity.KeyBoardBaseActivity;
 
 import java.util.List;
 
@@ -22,16 +30,26 @@ public class KeyboardUtils {
     private KeyboardView mKeyboardView;
     private Keyboard mKeyboard;
     private TextView mTextView;
+    private LinearLayout ll_showkeyboard;
 
     private boolean isRight;
     private boolean isFirst;
 
-    private List<Keyboard.Key> keys;
 
-    public KeyboardUtils(Context context, Activity activity, TextView textView) {
+
+    private List<Keyboard.Key> keys;
+    private int mHeight;
+
+    public KeyboardUtils(Context context, Activity activity, TextView textView, LinearLayout ll_showkeyboard) {
         mContext = context;
         mActivity = activity;
         mTextView = textView;
+        this.ll_showkeyboard = ll_showkeyboard;
+        mHeight = this.ll_showkeyboard.getHeight();
+
+        WindowManager wm = mActivity.getWindowManager();
+        Display dp = wm.getDefaultDisplay();
+        mHeight = dp.getHeight();
 
         mKeyboard = new Keyboard(mContext, R.xml.keyboard);
         keys = mKeyboard.getKeys();
@@ -90,7 +108,7 @@ public class KeyboardUtils {
             } else if (primaryCode == 45) {  //减法
                 Toast.makeText(mContext, mContext.getString(R.string.noOpen), Toast.LENGTH_SHORT).show();
             } else if (primaryCode == Keyboard.KEYCODE_DONE) {  //OK
-                keys.get(keys.size() - 1).label = "=";
+                ((KeyBoardBaseActivity)mActivity).OK();
             } else { // 输入键盘值
                 String key = Character.toString((char) primaryCode);
                 if (primaryCode == 46) {
@@ -143,16 +161,34 @@ public class KeyboardUtils {
     };
 
     public void hideKeyboard() {
-        int visibility = mKeyboardView.getVisibility();
+        int visibility = ll_showkeyboard.getVisibility();
         if (visibility == View.VISIBLE) {
-            mKeyboardView.setVisibility(View.INVISIBLE);
+            TranslateAnimation ta1 = new TranslateAnimation(0.0f, 0.0f,
+                    0, mHeight);
+            ta1.setDuration(500);
+            ta1.setAnimationListener(new Animation.AnimationListener() {
+                @Override
+                public void onAnimationStart(Animation animation) {}
+
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                    ll_showkeyboard.setVisibility(View.GONE);
+                }
+
+                @Override
+                public void onAnimationRepeat(Animation animation) {}
+            });
+            ll_showkeyboard.startAnimation(ta1);
         }
     }
 
     public void showKeyboard() {
-        int visibility = mKeyboardView.getVisibility();
-        if (visibility == View.GONE || visibility == View.INVISIBLE) {
-            mKeyboardView.setVisibility(View.VISIBLE);
+        int visibility = ll_showkeyboard.getVisibility();
+        if (visibility == View.GONE) {
+            ll_showkeyboard.setVisibility(View.VISIBLE);
+            TranslateAnimation ta = new TranslateAnimation(0.0f, 0.0f,mHeight, 0);
+            ta.setDuration(500);
+            ll_showkeyboard.startAnimation(ta);
         }
     }
 

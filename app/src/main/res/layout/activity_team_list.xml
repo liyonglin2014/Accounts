@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray_light"
+    android:orientation="vertical">
+
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/slv_team"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="15dp"
+        android:divider="@color/gray_light"
+        android:dividerHeight="0.5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_team_add"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="@string/xinjianchengyuan"
+            android:padding="15dp"
+            android:textCursorDrawable="@null"
+            android:textColorHint="@color/gray_light2"
+            android:textColor="@color/gray2"
+            android:background="@null"/>
+
+        <Button
+            android:id="@+id/bt_team_commit"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray3"
+            android:textSize="20sp"
+            android:text="@string/commit"/>
+
+    </LinearLayout>
+
+</LinearLayout>

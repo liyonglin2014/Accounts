@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/gray_light"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_write"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:hint="@string/input_beizhu"
+            android:textColorHint="@color/gray_light2"
+            android:textColor="@color/gray2"
+            android:textCursorDrawable="@null"
+            android:background="@null"
+            android:gravity="top"
+            android:textSize="20sp"
+            android:layout_height="90dp" />
+
+        <ImageView
+            android:id="@+id/iv_write"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="15dp"
+            android:src="@mipmap/xiangji"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/iv_write_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/close_cha"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/iv_write_commit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/commit_gou"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

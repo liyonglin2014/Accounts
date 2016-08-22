@@ -10,12 +10,18 @@
     <color name="gray3">#FF808080</color>
     <color name="gray_light">#FFF1F1F1</color>
     <color name="gray_light2">#FFD5D5D5</color>
+    <color name="gray_light3">#FFDDDDDD</color>
     <color name="blue_light">#FF44B7F9</color>
     <color name="bg_gray_light">#FFF4F4F4</color>
-    <color name="qianbao_item_green">#FF5CCF83</color>
-    <color name="qianbao_item_yellow">#FFC8B954</color>
+    <color name="qianbao_item_green">#FF43C770</color>
+    <color name="qianbao_item_yellow">#FFCCBE5F</color>
     <color name="qianbao_item_purple">#FF6E9AC3</color>
-    <color name="qianbao_item_blue">#FF27B7F5</color>
+    <color name="qianbao_item_blue">#FF35ADE0</color>
+    <color name="qianbao_item_brown">#FFD98961</color>
+    <color name="qianbao_item_pink">#FFD582C2</color>
     <color name="white">#ffffffff</color>
     <color name="red">#FFDA1212</color>
+    <color name="translucent">#b0000000</color>
+    <color name="date_1">#F24949</color>
+    <color name="date_2">#40000000</color>
 </resources>

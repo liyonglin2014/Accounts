@@ -10,4 +10,5 @@ public class BaseFragment extends Fragment {
     public void setIsShowBook(boolean isShowBook){
         this.isShowBook = isShowBook;
     }
+    public void updateFragment(){}
 }

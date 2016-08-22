@@ -9,9 +9,11 @@ public class FinalAttr {
     public static final String CREATE_TEAM = "CREATE TABLE team(_id integer PRIMARY KEY " +
             "AUTOINCREMENT NOT NULL, name varchar(20), book_id integer NOT NULL);";
     public static final String CREATE_TEAM_ACCOUNT = "CREATE TABLE team_account(_id integer PRIMARY " +
-            "KEY AUTOINCREMENT,account_name varchar(20),account_time varchar(20),account_payMode " +
+            "KEY AUTOINCREMENT,team_id integer NOT NULL,account_time integer,account_payMode " +
             "integer NOT NULL,account_describe varchar,account_money varchar(20)," +
-            "account_mode integer NOT NULL, book_id integer NOT NULL);";
+            "account_mode integer NOT NULL, book_id integer NOT NULL, year integer NOT NULL," +
+            "moon integer NOT NULL, isPay integer NOT NULL, " +
+            "classify_id integer NOT NULL, imgPath varchar(100));";
     public static final String CREATE_ACCOUNT_BOOK = "create table account_book (_id integer PRIMARY KEY " +
             "AUTOINCREMENT NOT NULL, book_name varchar(20), book_mode integer NOT NULL)";
     public static final String CREATE_CLASSIFY = "create table classify (_id integer PRIMARY KEY " +
@@ -25,12 +27,18 @@ public class FinalAttr {
 
     public static final String Field_ID = "_id";
 
-    public static final String Field_ACCOUNT_NAME = "account_name";
+    public static final String Field_ACCOUNT_TEAMID = "team_id";
     public static final String Field_ACCOUNT_TIME = "account_time";
     public static final String Field_ACCOUNT_PAYMODE = "account_payMode";
     public static final String Field_ACCOUNT_DESCRIBLE = "account_describe";
     public static final String Field_ACCOUNT_MONEY = "account_money";
     public static final String Field_ACCOUNT_MODE = "account_mode";
+    public static final String Field_ACCOUNT_BOOKID = "book_id";
+    public static final String Field_ACCOUNT_CLASSIFYID = "classify_id";
+    public static final String Field_ACCOUNT_ISPAY = "isPay";
+    public static final String Field_ACCOUNT_IMGPATH = "imgPath";
+    public static final String Field_ACCOUNT_YEAR = "year";
+    public static final String Field_ACCOUNT_MOON = "moon";
 
     public static final String Field_BOOK_MODE = "book_mode";
     public static final String Field_BOOK_NAME = "book_name";
@@ -39,10 +47,28 @@ public class FinalAttr {
     public static final String Field_CLASSIFY_MODE = "classify_mode";
     public static final String Field_CLASSIFY_IMGID = "classify_imgId";
 
+    public static final String Field_TEAM_NAME = "name";
+    public static final String Field_TEAM_BOOKID = "book_id";
+
     public static final int CLASSIFY_MODE_IN = 1;
     public static final int CLASSIFY_MODE_OUT = 2;
 
+    public static final int BOOK_MODE_TEAM = 1;
+    public static final int BOOK_MODE_SINGLE = 2;
+
+    public static final int YES = 1;
+    public static final int NO = 2;
+
     public static final int UPDATE = 200;
+
+    public static final String[] QIANBAO_TITLES = {"现金", "支付宝", "微信", "银行卡", "应收账", "应付账"};
+    public static final int[] QIANBAO_IMGS = {R.mipmap.qianbao_xianjin, R.mipmap.qianbao_zhifubao,
+            R.mipmap.qianbao_weixin, R.mipmap.qianbao_yinhangka, R.mipmap.shouru, R.mipmap.zhichu};
+    public static final int[] QIANBAO_COLORS = {R.color.qianbao_item_blue, R.color.qianbao_item_purple,
+            R.color.qianbao_item_green, R.color.qianbao_item_yellow, R.color.qianbao_item_brown, R.color.qianbao_item_pink};
+
+    public static final int PAYMODE[] = {R.string.xianjin, R.string.zhifubao, R.string.weixin,
+            R.string.yinhangka};
 
     public static final int [] ICONS = {R.mipmap.icon_shouru_baoxiao, R.mipmap.icon_shouru_gongzi,
             R.mipmap.icon_shouru_jiangjin, R.mipmap.icon_shouru_linghuaqian, R.mipmap.icon_shouru_shenghuofei,

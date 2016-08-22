@@ -2,13 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.liyonglin.accounts">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/MyStyle">
-        <activity android:name=".activity.WelcomeActivity"></activity>
+        <activity android:name=".activity.WelcomeActivity" >
+
+        </activity>
         <activity android:name=".activity.HomepageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,8 +24,14 @@
         <activity android:name=".activity.ToolBarActivity" />
         <activity android:name=".activity.AccountAddActivity" />
         <activity android:name=".activity.ClassifyListActivity" />
-        <activity android:name=".activity.ClassifyUpdateActivity"/>
-        <activity android:name=".activity.ClassifyAddActivity"/>
+        <activity android:name=".activity.ClassifyUpdateActivity" />
+        <activity android:name=".activity.ClassifyAddActivity" />
+        <activity android:name=".activity.TeamListActivity" />
+        <activity android:name=".activity.ShowImgActivity" />
+        <activity android:name=".activity.CalendarSelectActivity" />
+        <activity android:name=".activity.KeyBoardBaseActivity" />
+        <activity android:name=".activity.AccountListActivity" />
+        <activity android:name=".activity.AccountShowActivity"></activity>
     </application>
 
 </manifest>

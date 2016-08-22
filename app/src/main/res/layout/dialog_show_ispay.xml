@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_dialog_book_add">
+
+    <TextView
+        android:id="@+id/tv_isPay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray1"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/isPay"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_light"/>
+
+    <TextView
+        android:id="@+id/tv_isNotPay"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray1"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:text="@string/isNotPay"/>
+
+</LinearLayout>

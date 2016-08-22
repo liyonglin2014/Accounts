@@ -33,6 +33,7 @@ import com.liyonglin.accounts.fragment.Fragment_qianbao;
 import com.liyonglin.accounts.fragment.Fragment_tixing;
 import com.liyonglin.accounts.fragment.Fragment_zhongxin;
 import com.liyonglin.accounts.utils.AccountDBUtils;
+import com.liyonglin.accounts.utils.FinalAttr;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -86,6 +87,8 @@ public class HomepageActivity extends ToolBarActivity implements View.OnClickLis
     private Button bt_book_delete_commit;
     private Button bt_book_delete_cancel;
 
+    private int poisition;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,7 +98,6 @@ public class HomepageActivity extends ToolBarActivity implements View.OnClickLis
         initEvent();
         setToolBarEvent();
         selectBook();
-
     }
 
     private void setFragmentIsShowBook(int visibility){
@@ -194,6 +196,7 @@ public class HomepageActivity extends ToolBarActivity implements View.OnClickLis
                     galleryAdapter.notifyDataSetChanged();
                     startUpAnimation();
                     iv_select_book.setImageResource(R.mipmap.down);
+                    fragments.get(1).updateFragment();
                 }
             }
         });
@@ -399,6 +402,7 @@ public class HomepageActivity extends ToolBarActivity implements View.OnClickLis
             @Override
             public void onPageSelected(int position) {
                 setTabsSelectedImg(position);
+                poisition = position;
             }
         });
     }
@@ -499,12 +503,24 @@ public class HomepageActivity extends ToolBarActivity implements View.OnClickLis
                 setTabsSelectedImg(3);
                 break;
             case R.id.iv_account_add:
-                startActivity(new Intent(this, AccountAddActivity.class));
+                setTabsSelectedImg(poisition);
+                startActivityForResult(new Intent(this, AccountAddActivity.class), ACCOUNT_ADD);
                 break;
             default:
                 break;
         }
 
+    }
+
+    private static final int ACCOUNT_ADD = 1;
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+            if(resultCode == FinalAttr.UPDATE) {
+                fragments.get(1).updateFragment();
+            }
+            setTabsSelectedImg(poisition);
     }
 
     private void resetImg() {
